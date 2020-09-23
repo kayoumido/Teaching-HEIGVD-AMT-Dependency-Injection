@@ -5,12 +5,28 @@ import ch.heigvd.amt.fishing.equipment.Boat;
 import ch.heigvd.amt.fishing.equipment.Boots;
 import ch.heigvd.amt.fishing.equipment.FishingRod;
 
+import ch.heigvd.amt.fishing.equipment.api.*;
+
 public class Fisherman {
 
-  private Boots boots;
-  private FishingRod fishingRod;
-  private Bait bait;
-  private Boat boat;
+  private IBoots boots;
+  private IFishingRod fishingRod;
+  private IBait bait;
+  private IBoat boat;
+
+  public Fisherman(IBoots boots, IFishingRod fishingRod, IBait bait, IBoat boat) {
+    this.boots = boots;
+    this.fishingRod = fishingRod;
+    this.bait = bait;
+    this.boat = boat;
+  }
+
+  public Fisherman() {
+    boots = new Boots();
+    fishingRod = new FishingRod();
+    bait = new Bait();
+    boat = new Boat();
+  }
 
   public Fish goGetFish() {
     boots.wear();

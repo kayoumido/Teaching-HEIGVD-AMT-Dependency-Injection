@@ -1,7 +1,10 @@
 package ch.heigvd.amt.fishing.equipment;
 
-public class Boots {
+import ch.heigvd.amt.fishing.equipment.api.IBoots;
 
+public class Boots implements IBoots {
+
+  @Override
   public void wear() {
 
   }

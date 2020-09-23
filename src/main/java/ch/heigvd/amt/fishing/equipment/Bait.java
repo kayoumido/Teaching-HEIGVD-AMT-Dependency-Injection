@@ -1,7 +1,10 @@
 package ch.heigvd.amt.fishing.equipment;
 
-public class Bait {
+import ch.heigvd.amt.fishing.equipment.api.IBait;
 
+public class Bait implements IBait {
+
+  @Override
   public void putOnHook() {}
 
 }
